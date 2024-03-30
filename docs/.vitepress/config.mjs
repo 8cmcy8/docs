@@ -10,7 +10,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     logo: "logo.svg", // 配置logo位置，public目录
     outlineTitle: "文章目录",
-    outline: [2,6],
+    outline: [1,6],
     footer: {
       copyright:"Copyright@ 2024.04.1-present cmcy"
     },
@@ -24,8 +24,14 @@ export default defineConfig({
         text: '网络安全相关',
         items: [
           { text: 'Linux基础', link: '/《Linux基础》总集篇' },
-          { text: '网络知识基础', link: '/《Linux网络基础》总集篇' }
-        ]
+          { text: '网络知识基础', link: '/《Linux网络基础》总集篇' },
+        ],
+      },
+      {
+        text: '工具使用',
+        items: [
+          { text: 'Git教程', link: '/Git教程' },
+        ],
       }
     ],
     search: {
