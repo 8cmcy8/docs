@@ -16,15 +16,15 @@ export default defineConfig({
     },
     nav: [
       { text: '我的主页', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: '知识文档', link: '/《Linux基础》总集篇' }
     ],
 
     sidebar: [
       {
-        text: 'Examples',
+        text: '网络安全相关',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: 'Linux基础', link: '/《Linux基础》总集篇' },
+          { text: '网络知识基础', link: '/《Linux网络基础》总集篇' }
         ]
       }
     ],

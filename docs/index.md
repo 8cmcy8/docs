@@ -11,11 +11,11 @@ hero:
     alt: 背景图
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Linux基础
+      link: /《Linux基础》总集篇
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 网络知识基础
+      link: /《Linux网络基础》总集篇
 
 features:
   - title: keep stduying
