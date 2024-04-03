@@ -9,7 +9,7 @@
   - 代码漏洞（web漏洞）
 - 护网行动
 ---
-1. linux系统的由来和介绍
+2. linux系统的由来和介绍
 - 操作系统介绍                驱动
 用户--》软件————操作系统内核--------硬件
   系统软件 应用软件
@@ -25,21 +25,21 @@
     - 红帽 redhat fedora centos去掉了红帽的商店软件，改用开源软件去代替 最稳定企业服务器操作系统 centos 7 centos 8
     - debian debian ubuntu(乌班图) kali
 ---
-1. linux安装
+3. linux安装
 - 清华大学开源软件镜像站
 老生常谈，配置完了在选择ios镜像文件
 ---
-1. 远程连接Linux
+4. 远程连接Linux
 Linux命令：
 - 查看ip地址`ip addr`
 - 远程连接linux：`ssh root@192.168.10.100`
 - 退出登录 `exit`
 ---
-1. linux系统的关机和重启
+5. linux系统的关机和重启
 - `shutdown -h now`（时间）
 - `reboot`
 ---
-1. Linux文件的操作
+6. Linux文件的操作
 - 查看目录下有哪些文件：`ls` == list
 - 新建文件：touch 文件名 such as：`touch dms.txt`
 - `touch {1..10}.txt`创建十个文件。。。
@@ -48,7 +48,7 @@ Linux命令：
 - 复制文件：`cp`(只能复制文件) == copy / cp 老文件名 新文件名
 - 重命名文件：`mv` == move `mv 老文件名 新文件名`
 ---
-1. Linux目录的操作
+7. Linux目录的操作
 - 新建目录(文件夹)：`mkdir 目录名`
 - 删除目录：rm删不得 `rm -f -r 目录` `rm -rf 目录`
 - `cd 目录` 进入目录 / `cd dms`
@@ -56,7 +56,7 @@ Linux命令：
 - 重命名目录 `mv 老文件名 新文件名`
 - 复制目录：`cp -a 老文件名 新文件名`
 ---
-1. 文件和目录的操作回顾
+8. 文件和目录的操作回顾
 - `pwd`打印当前完整目录
 - windows有好几个磁盘微软估计搞反c:\windows\admins
 - 其它系统/（顶级目录）`/root/dms`
@@ -76,7 +76,7 @@ Linux命令：
   - `mkdir dev{1..100}`
   - `mkdir -p 1/2/3/4/5/6` [创建多级目录]
 ---
-1. vi文件编辑器
+9. vi文件编辑器
 - 修改文件内容
   - vi三种模式
     - vi 1.txt是常规模式 可以使用大量的快捷键
@@ -91,7 +91,7 @@ Linux命令：
 - 安装gnome桌面 软件直接全选
 - 要会进入root模式
 ---
-1. Linux的目录结构
+2. Linux的目录结构
 目录的分隔符 `/`
 `-/` 代表根目录
 `/bin` 存放二进制的可执行文件，命令，特别重要不能删除
@@ -123,7 +123,7 @@ log 日志越来越大
   - mkdir /dms 绝对路径
 相对路径方便还是绝对路径方便，看情况根据 / 先后而定
 ---
-1. Linux的管道
+3. Linux的管道
 - `cat` 命令 从上往下顺序查看文本内容 `cat test03.txt`
 - `tac `命令 倒着查看`test03.txt`的全部内容
 - `head` 命令 什么都不加默认看10行，从头部开始看
@@ -133,7 +133,7 @@ log 日志越来越大
   - linux：实现一个复杂的功能，可以使用多个软件一起处理，开放，自由
   - windows：实现一个复杂的功能，就需要强大的软件
 ---
-1. Linux的用户管理
+4. Linux的用户管理
 - `useradd dms`(用户名) 新建用户
 - `passwd dms` 修改密码
 - `passwd` 直接改root密码
@@ -145,11 +145,11 @@ log 日志越来越大
   - 新建用户会有两个新建目录 家目录 信箱
 - u`sermod -L/--lock` 锁定用户 `-U/--unlock` 解锁用户
 ---
-1. Linux的用户和密码
+5. Linux的用户和密码
 - 查看用户uid：id 所有的用户信息都存储在/etc/passwd文件中
   - 所有用户密码都存储在/etc/shadow文件中 也可以覆盖改密码
 ---
-1. Linux的用户组讲解和小总结
+6. Linux的用户组讲解和小总结
 - 用户组管理
   - 1对1 1对多 多对多
   - 新建用户组 `groupadd test`
@@ -178,7 +178,7 @@ log 日志越来越大
 - . 代表当前目录 ..代表上一级目录
 - 可执行程序：要么使用完整路径执行，要么放在特定目录下面
 ---
-1. 文件和目录的权限
+2. 文件和目录的权限
 - r 4 / w 2 / x 1 / - 0
 - chmod 用于修改文件或目录权限的命令
 - chown 改变文件或目录的所有权 修改文件或目录的所有者和所属组的命令
@@ -187,7 +187,7 @@ log 日志越来越大
 文件默认权限：644 600
 目录权限：755 700
 ---
-1. Linux文件的属性
+3. Linux文件的属性
 - selinux 美国国家安全局 特别安全--特别麻烦 上面第11位的 . 
   - sestatus 查看selinux状态
 - linux系列
@@ -201,14 +201,14 @@ ln 原位置 新路径
   - 改变时间  change time
   - stat 3.txt
 ---
-1. shell(壳)的命令提示符
+4. shell(壳)的命令提示符
 - shell是Linux中比较重要的概念
   - `hostname` 修改主机名(临时)
   - `export PS1='[\u@\h \t \w]\$` 可定制的\u用户\h主机名\w相对路径
   - `hostnamectl set-hostname` 主机名(永久修改主机名)
   - `hostnamectl` 查看主机信息
 ---
-1. shell命令的格式
+5. shell命令的格式
 - shell基础语法
   - 格式1：只有一个命令1没有参数 ls pwd(显示目录) id
   - 格式2：命令有一个参数 ls -l usermod -h / --help
@@ -219,7 +219,7 @@ ln 原位置 新路径
   - 格式7：命令带多个参数多个目标 ls -a -l -h /tmp /root
 cp -a -v /root /root2
 ---
-1. shell的快捷键
+6. shell的快捷键
 - tab键补全 命令和路径 又快又准
 - ctrl + a 光标跳转至正在输入的命令行的首部
 - ctrl + e 光标跳转至正在输入的命令行的尾部
@@ -233,7 +233,7 @@ cp -a -v /root /root2
 - ctrl + w 光标往前删除一个参数
 - esc + . 上一条命令的最后一个参数，或者目标
 ---
-1. shell的历史命令
+7. shell的历史命令
 - `history ！+ 编号`(再执行一次历史命令)/命令开头
 - `history -c` 清除历史记录(内存)
 - `rm -fr .bash_history` 删除主文件夹下.bash_history文件
@@ -247,7 +247,7 @@ cp -a -v /root /root2
   - `alias rm='echo 禁止删除文件'`
   - `alias `
 ---
-1. vi vim 文件编辑器
+2. vi vim 文件编辑器
 - vim是vi的加强版
   - 移动光标
     - h,j,k,l 左，下，上，右
@@ -282,7 +282,7 @@ cp -a -v /root /root2
     - :q! 强制退出，放弃修改
     - 删除单个字符 x  也可以10x
 ---
-1. linux输入输出重定向
+3. linux输入输出重定向
 - 输出
   - \> 重定向，将命令执行结果不输出到屏幕上，输出到文件里，会清空原文件
   - \>> 追加重定向，不会清空原文件
@@ -290,7 +290,7 @@ cp -a -v /root /root2
   - < 输入重定向
   - << 输入追加重定向
 ---
-1. 文件的压缩和解压
+4. 文件的压缩和解压
 - `tar -zcf 压缩路径 目标1 目标2 ..`
 - `tar -cf 归档路径 目标1 目标2 ..`
 - `tar -zxf` 解压
@@ -305,7 +305,7 @@ cp -a -v /root /root2
 - `yum install unar -y`
 - `unar -o /opt 456.rar` 解压
 ---
-1. Linux文件传输
+5. Linux文件传输
 - Linux———Linux scp传输 双方必须都跑ssh服务端
 - Linux———windows win可以单向传输scp xftp双向 rz-sz 
   - 下载文件 wget curl
