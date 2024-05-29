@@ -28,9 +28,9 @@ export default defineConfig({
         ],
       },
       {
-        text: '工具使用',
+        text: '个人经历',
         items: [
-          { text: 'Git教程', link: '/Git教程' },
+          { text: '重启博客', link: '/重启博客' },
         ],
       }
     ],
