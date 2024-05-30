@@ -21,10 +21,11 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: '网络安全相关',
+        text: '基础知识',
         items: [
           { text: 'Linux基础', link: '/《Linux基础》总集篇' },
           { text: '网络知识基础', link: '/《Linux网络基础》总集篇' },
+          { text: 'MySQL(未完成)', link: '/MySQL' },
         ],
       },
       {
