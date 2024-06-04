@@ -26,6 +26,7 @@ export default defineConfig({
           { text: 'Linux基础', link: '/《Linux基础》总集篇' },
           { text: '网络知识基础', link: '/《Linux网络基础》总集篇' },
           { text: 'MySQL(未完成)', link: '/MySQL' },
+          { text: '操作系统(未完成)', link: '/操作系统' },
         ],
       },
       {
