@@ -33,6 +33,7 @@ export default defineConfig({
         text: '个人经历',
         items: [
           { text: '重启博客', link: '/重启博客' },
+          { text: '重现老博客文章', link: '/重现老博客文章' },
         ],
       }
     ],
