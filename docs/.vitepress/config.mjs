@@ -16,7 +16,9 @@ export default defineConfig({
     },
     nav: [
       { text: '我的主页', link: '/' },
-      { text: '知识文档', link: '/《Linux基础》总集篇' }
+      { text: '基础知识', link: '/《Linux基础》总集篇' },
+      { text: '环境', link: '/系统安装' },
+      { text: '个人经历', link: '/重启博客' }
     ],
 
     sidebar: [
@@ -27,6 +29,12 @@ export default defineConfig({
           { text: '网络知识基础', link: '/《Linux网络基础》总集篇' },
           { text: 'MySQL(未完成)', link: '/MySQL' },
           { text: '操作系统(未完成)', link: '/操作系统' },
+        ],
+      },
+      {
+        text: '环境',
+        items: [
+          { text: '系统安装', link: '/系统安装' },
         ],
       },
       {
