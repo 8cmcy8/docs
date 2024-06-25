@@ -2,6 +2,10 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  markdown: {
+    math: true
+  },
+  lastUpdated: true,
   base: "/docs/",
   head: [["link", { rel: "icon", href: "/logo.svg" }]],
   title: "池溟昌胤的博客文档",
@@ -12,10 +16,11 @@ export default defineConfig({
     outlineTitle: "文章目录",
     outline: [1,6],
     footer: {
-      copyright:"Copyright@ 2024.04.1-present cmcy"
+      copyright: "noCopyright@ 2024.04.1-present cmcy"
     },
     nav: [
       { text: '我的主页', link: '/' },
+      { text: '数学', link: '/数学分析' },
       { text: '基础知识', link: '/《Linux基础》总集篇' },
       { text: '环境', link: '/系统安装' },
       { text: '个人经历', link: '/重启博客' }
@@ -23,7 +28,16 @@ export default defineConfig({
 
     sidebar: [
       {
+        text: '数学',
+        collapsed: false,
+        items: [
+          { text: '数学分析(未完成)', link: '/数学分析' },
+          { text: '高等代数(未完成)', link: '/高等代数' },
+        ],
+      },
+      {
         text: '基础知识',
+        collapsed: false,
         items: [
           { text: 'Linux基础', link: '/《Linux基础》总集篇' },
           { text: '网络知识基础', link: '/《Linux网络基础》总集篇' },
@@ -33,15 +47,18 @@ export default defineConfig({
       },
       {
         text: '环境',
+        collapsed: false,
         items: [
           { text: '系统安装', link: '/系统安装' },
         ],
       },
       {
         text: '个人经历',
+        collapsed: false,
         items: [
           { text: '重启博客', link: '/重启博客' },
           { text: '重现老博客文章', link: '/重现老博客文章' },
+          { text: '大一下期末总结', link: '/大一下期末总结' },
         ],
       }
     ],

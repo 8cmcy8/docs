@@ -11,7 +11,7 @@
 - wifi 以前【802.11b-a-g-n】【最大速率1& 2-11-54-54-600mbps】  
 - wifi 7正在路上今年可能会跳票   
 ---
-1. osi 7层模型[协议][网络(无数个协议)]  
+2. osi 7层模型
 - 电脑系统 windows linux mac-os unix  
  手机 andriod（linux+java垃圾回收机制，碎片化问题 iOS（unix+object-c）苹果没有  
 - 【网线标准568b（橙白-橙-绿白-蓝-蓝白-绿-棕白-棕）（【定制】两头都错也能上网）】【四根线一般只能百兆，八根线可以千兆（速度也要协商）】【有双绞线的说法】  
@@ -24,11 +24,12 @@
   - 物理层 信号转换的问题 数字信号 电信号  
   - 数据链路层 mac地址[每一块网卡都有唯一的地址] 唯一 物理地址 以太网  
   - 网络层 ip地址[公网ip(iana分配ip地址) 内网ip] 公网ip唯一 定位  
-  - 传输层 端口[] tcp[可靠的,速度慢][长距离传输]/dup[不可靠的,速度快][效率,实时性(直播一般是这样)]【每个服务端启动的时候都会监听一个端口】【vnc协议 5900/http:// 80 /ssh 22 】[例如192.168.19.11:5900]  
+  - 传输层 端口 tcp可靠的,速度慢 长距离传输/dup 不可靠的,速度快  效率,实时性(直播一般是这样)]【每个服务端启动的时候都会监听一个端口】【vnc协议 5900/http:// 80 /ssh 22 】[例如192.168.19.11:5900]  
   - 会话层 会话【在部分协议里最后三层就是一层】  
   - 表示层 文件的类型  
   - 应用层 http ftp smtp【qq 浏览器】  
 ---
+3. 模型
 - 目前用的最广tcp/ip协议 【4层&5层（以下为五层）】  
   - 物理层 信号转换  
   - 数据链路层 mac 识别每块网卡的身份  
@@ -37,7 +38,7 @@
   - 应用层 各种应用软件  
   - 【抓包来分析的】  
 ---
-1. 数据的封装与解封装  
+4. 数据的封装与解封装  
 - 应用层---》 数据5m  
 - 传输层发---》 tcp报文+数据1 tcp报文+数据2 tcp报文+数据3 ...    
 - 网络层---》ip包+tcp报头+数据1 ip包+tcp报头+数据2 ...  
@@ -77,7 +78,7 @@
 - ip地址192.168.19.11     
 - 子网掩码255.255.255.0 === 192.168.19.11/24  
   $\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad$ 10.0.0/8  
-$\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad$ 172.16.0.0/16  
+  $\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad$ 172.16.0.0/16  
 - 网段里面的ip越多，网段范围越大    
 - 192.168.19.11/24  
   - 11000000.10101000.00010011.00001011  
@@ -116,7 +117,6 @@ $\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad$ 172.16.0.0/16
 ---
 
 - 体验 路由器  
-
   - 软件路由器：软路由 + 普通pc  
   - 硬件路由器：普通路由器  
   - 企业路由器：企业级路由器          
@@ -124,7 +124,7 @@ $\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad$ 172.16.0.0/16
 - 网络规划【两块网卡】 
   - 一块nat模式桥接（外网）ikuai        
   - 一块仅主机模式（内网） ikuai  
- $\qquad\qquad\qquad$ [初始密码admin 我自己改成了老密码]  
+   $\qquad\qquad\qquad$ [初始密码admin 我自己改成了老密码]  
   - 安装akuai：-【最后在安装镜像】安装镜像文件 记得给1g内存【后面步骤很简单】  
      - 给两个网卡第一个仅主机模式 第二个nat模式  
      - 设置LAN（内网）/WAN（外网）地址  
@@ -162,7 +162,7 @@ $\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad$ 172.16.0.0/16
     - <-->  www.baigui.com             
       - <--> $\quad\quad$ 缓存  $\quad\quad$   www.baigui.cloud （“.”就是根域名）  
         - <--------->dns 代理<---------------------->十三台根域名服务器  
-- 上面过程完了之后十三台根域名服务根找不到,到.colud.去找www.baigui.cloud又会去找腾讯的dns服务器去解析最终找到 dns要找好几次才能找到所以要本地缓存   
+- 上面过程完了之后十三台根域名服务根找不到,到.colud.去找www.baigui.cloud又会去找腾讯的dns服务器去解析最终找到 dns要找好几次才能找到所以要本地缓存   qwqweqweqw
 ---
 ## linux网络基础 3
 9. 文字编码  
@@ -193,7 +193,7 @@ $\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad$ 172.16.0.0/16
 ---
 11.  dns的记录类型  
 - A记录 【ipv4】www.oldqiang.com 123.xx.xx.xx  
-- CNAME 别名 www.oldqiang.com -->www.qstack.com  -->......  
+- CNAME 别名 www.oldqiang.com -->www.qstack.com  -->...... 
 - MX 邮箱专属  
 - NS nameserver 授权dns解析  
 - AAAA 【ipv6】  
@@ -335,24 +335,24 @@ $\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad$ 172.16.0.0/16
     - 【NAT模式：在NAT模式下，虚拟机通过宿主机的网络接口与外部网络通信。宿主机充当了一个网络地址转换（NAT）的角色，为虚拟机提供了一个私有的IP地址，并将虚拟机的网络流量转发到外部网络。虚拟机可以使用宿主机作为网关来访问外部网络，但外部网络无法直接访问虚拟机。NAT模式通常用于需要隔离虚拟机与外部网络的场景。】
     - 【你妈的不得不说这块的内容确实搞人心态】
     - 【nat网卡】
-虚拟机中虚拟网络设置192.168.10.0
-宿主机中vm8设置为192.168.10.1
-网关为192.168.10.2
-广播地址为192.168.10.255
-dhcp自动分配192.168.10.3~254
-第一台centos7 ip 192.168.10.3
-第二胎centos7 ip 192.168.10.100
-【第一台中的地址是dhcp是自动分配的，第二台中的地址是自己分配的】
+    虚拟机中虚拟网络设置192.168.10.0
+    宿主机中vm8设置为192.168.10.1
+    网关为192.168.10.2
+    广播地址为192.168.10.255
+    dhcp自动分配192.168.10.3~254
+    第一台centos7 ip 192.168.10.3
+    第二胎centos7 ip 192.168.10.100
+    【第一台中的地址是dhcp是自动分配的，第二台中的地址是自己分配的】
 - xshell能连，但是上不了网
   - 能ping同公網ip，ping不通域名，dns地址有問題
   - 物理機上不了網
     - 第一步：检查物理是否正常
-第二步：ping网关
-第三步：ping公网ip
-第四步：`ping www.baidu.com`
-$\qquad\quad$ `tracert -d www.qq.com`
-第五步：ping自己服务器
-电脑-普通交换机-核心交换机-企业级路由器-光猫-运营商isp
+    第二步：ping网关
+    第三步：ping公网ip
+    第四步：`ping www.baidu.com`
+    $\qquad\quad$ `tracert -d www.qq.com`
+    第五步：ping自己服务器
+    电脑-普通交换机-核心交换机-企业级路由器-光猫-运营商isp
 ----
 - 我叼你妈的多少有点离谱了。。。
 这个day4足足学了将近两天，涉及的东西突然之间就变巨多还好坚持下来了
@@ -366,8 +366,8 @@ $\qquad\quad$ `tracert -d www.qq.com`
 
 - 静态路由：需要人工配置
   - 动态路由：提前配置一些指令，路由器自己学习
-【我就知道还要搞我，又让我下了个思科模拟器呜呜呜呜呜呜呜呜真真是服了】
-网关是优先级最低的静态路由 
+  【我就知道还要搞我，又让我下了个思科模拟器呜呜呜呜呜呜呜呜真真是服了】
+  网关是优先级最低的静态路由 
 ---
 1.  静态路由
 - arp能连通的直连路由
@@ -405,13 +405,13 @@ $\qquad\quad$ `tracert -d www.qq.com`
 22.  把linux配置成路由器
 - 上面配置的路由只有数据转发的作用，没有共享上网的作用
   路由器：nat地址转换，共享上网的功能
-```route add -net 0.0.0.0/0 gw 192.168.20.2（看虚拟机的网关）```
-清空at地址规则 ```iptables -t nat -F```
-```iptables -t nat -A POSTROUTING -s 172.16.1.0/24 -j MASQUERADE```
-```route add -net 0.0.0.0/0 gw 172.16.1.12```
-```vim /etc/resolv.conf```
-```nameserver 223.5.5.5  ```
-ttl 是time to live 的缩写，该字段指定ip包被路由器丢弃之前允许通过的最大网段数量【可以通过注册表来修改】
+  ```route add -net 0.0.0.0/0 gw 192.168.20.2（看虚拟机的网关）```
+  清空at地址规则 ```iptables -t nat -F```
+  ```iptables -t nat -A POSTROUTING -s 172.16.1.0/24 -j MASQUERADE```
+  ```route add -net 0.0.0.0/0 gw 172.16.1.12```
+  ```vim /etc/resolv.conf```
+  ```nameserver 223.5.5.5  ```
+  ttl 是time to live 的缩写，该字段指定ip包被路由器丢弃之前允许通过的最大网段数量【可以通过注册表来修改】
 ---
 23.  给linux路由器配置dhcp服务
 - 安装dhcp
@@ -459,7 +459,7 @@ ttl 是time to live 的缩写，该字段指定ip包被路由器丢弃之前允�
   - 查看防火墙状态：
    ```
    sudo systemctl status firewalld
-   ``` 
+   ```
   - 设置防火墙开机启动：
    ```
    sudo systemctl enable firewalld
@@ -467,7 +467,7 @@ ttl 是time to live 的缩写，该字段指定ip包被路由器丢弃之前允�
   - 禁用防火墙开机启动：
    ```
    sudo systemctl disable firewalld
-   ``` 
+   ```
   -   开放端口（临时）：
    ```
    sudo firewall-cmd --zone=public --add-port=端口号/协议
@@ -584,3 +584,5 @@ VPN的工作原理如下：
 ---
 - 终于算是告一段落了。现在时间是2024/3/11 0:34:57
 ---
+
+[网络(无数个协议)]: 
