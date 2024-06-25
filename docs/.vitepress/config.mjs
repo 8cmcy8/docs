@@ -20,10 +20,37 @@ export default defineConfig({
     },
     nav: [
       { text: '我的主页', link: '/' },
-      { text: '数学', link: '/数学分析' },
-      { text: '基础知识', link: '/《Linux基础》总集篇' },
-      { text: '环境', link: '/系统安装' },
-      { text: '个人经历', link: '/重启博客' }
+      {
+        text: '数学', 
+        items: [
+          { text: '数学分析(未完成)', link: '/数学分析' },
+          { text: '高等代数(未完成)', link: '/高等代数' },
+        ],
+       },
+      {
+        text: '基础知识',
+        items:[
+        { text: '网络知识基础', link: '/《Linux网络基础》总集篇' },
+        { text: 'Linux基础', link: '/《Linux基础》总集篇' },
+        { text: 'MySQL(未完成)', link: '/MySQL' },
+        { text: '操作系统(未完成)', link: '/操作系统' },
+        { text: '计算机组成原理(未完成)', link: '/计算机组成原理' },
+        ]
+      },
+      {
+        text: '环境', 
+         items:[
+            { text: '系统安装', link: '/系统安装' },
+         ]
+       },
+      {
+        text: '个人经历', 
+        items: [
+        { text: '重启博客', link: '/重启博客' },
+        { text: '重现老博客文章', link: '/重现老博客文章' },
+        { text: '大一下期末总结', link: '/大一下期末总结' },
+        ],
+       }
     ],
 
     sidebar: [
@@ -43,6 +70,7 @@ export default defineConfig({
           { text: '网络知识基础', link: '/《Linux网络基础》总集篇' },
           { text: 'MySQL(未完成)', link: '/MySQL' },
           { text: '操作系统(未完成)', link: '/操作系统' },
+          { text: '计算机组成原理(未完成)', link: '/计算机组成原理' },
         ],
       },
       {
