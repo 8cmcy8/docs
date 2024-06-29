@@ -41,16 +41,10 @@ export default defineConfig({
         text: '环境', 
          items:[
             { text: '系统安装', link: '/系统安装' },
+            { text: '各类语言环境配置', link: '/各类语言环境配置' },
          ]
        },
-      {
-        text: '个人经历', 
-        items: [
-        { text: '重启博客', link: '/重启博客' },
-        { text: '重现老博客文章', link: '/重现老博客文章' },
-        { text: '大一下期末总结', link: '/大一下期末总结' },
-        ],
-       }
+      { text: '个人经历', link: '/重启博客' },
     ],
 
     sidebar: [
@@ -78,6 +72,7 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: '系统安装', link: '/系统安装' },
+          { text: '各类语言环境配置', link: '/各类语言环境配置' },
         ],
       },
       {
