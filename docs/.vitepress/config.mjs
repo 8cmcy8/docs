@@ -4,7 +4,7 @@ import escookConfig from '@escook/vitepress-theme/config'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   markdown: {
-    math: true
+    math: true,
   },
   extends: escookConfig,
   lastUpdated: true,
@@ -16,7 +16,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     logo: "滑稽.jpg", // 配置logo位置，public目录
     outlineTitle: "文章目录",
-    outline: [1,6],
+    outline: "deep",
     footer: {
       copyright: "noCopyright@ 2024.04.1-present cmcy"
     },
