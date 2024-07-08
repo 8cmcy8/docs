@@ -1,23 +1,26 @@
 import { defineConfig } from 'vitepress'
-
+import { defineConfigWithTheme } from 'vitepress'
+import escookConfig from '@escook/vitepress-theme/config'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   markdown: {
     math: true
   },
+  extends: escookConfig,
   lastUpdated: true,
   base: "/docs/",
-  head: [["link", { rel: "icon", href: "/logo.svg" }]],
+  head: [["link", { rel: "icon", href: "/滑稽.jpg" }]],
   title: "池溟昌胤的博客文档",
   description: "A VitePress Site",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: "logo.svg", // 配置logo位置，public目录
+    logo: "滑稽.jpg", // 配置logo位置，public目录
     outlineTitle: "文章目录",
     outline: [1,6],
     footer: {
       copyright: "noCopyright@ 2024.04.1-present cmcy"
     },
+    confetti: false,
     nav: [
       { text: '我的主页', link: '/' },
       {
