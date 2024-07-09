@@ -5,6 +5,10 @@ import escookConfig from '@escook/vitepress-theme/config'
 export default defineConfig({
   markdown: {
     math: true,
+    image: {
+      // 默认禁用图片懒加载
+      lazyLoading: true
+    }
   },
   extends: escookConfig,
   lastUpdated: true,
@@ -24,78 +28,87 @@ export default defineConfig({
     nav: [
       { text: '我的主页', link: '/' },
       { text: '友情链接', link: '/team.md' },
-      {
-        text: '数学', 
-        items: [
-          { text: '数学分析(未完成)', link: '/数学/数学分析' },
-          { text: '高等代数(未完成)', link: '/数学/高等代数' },
-        ],
-       },
-      {
-        text: '基础知识',
+      {text: '基础知识',link:'/基础知识/'},
+      {text: '环境配置',link:'/环境/'},
+      {text: '个人经历',link:'/个人经历/'},
+    ],
+    sidebar: {
+      '/基础知识/': [
+        {
+          text: '计算机基础',
+          collapsed: false,
         items:[
-        { text: '网络知识基础', link: '/基础知识/《Linux网络基础》总集篇' },
-        { text: 'Linux基础', link: '/基础知识/《Linux基础》总集篇' },
-        { text: 'MySQL(未完成)', link: '/基础知识/MySQL' },
-        { text: '操作系统(未完成)', link: '/基础知识/操作系统' },
-        { text: '计算机组成原理(未完成)', link: '/基础知识/计算机组成原理' },
-        ]
-      },
-      {
-        text: '环境', 
+          {
+            text: 'OLD',
+            collapsed: false,
+            items: [
+              { text: '网络知识基础', link: '/基础知识/计算机/《Linux网络基础》总集篇' },
+              { text: 'Linux基础', link: '/基础知识/计算机/《Linux基础》总集篇' },
+            ],
+          },
+          {
+            text: 'MIDDLE',
+            collapsed: false,
+            items: [
+              { text: 'MySQL(未完成)', link: '/基础知识/计算机/MySQL' },
+              { text: '操作系统(未完成)', link: '/基础知识/计算机/操作系统' },
+              { text: '计算机组成原理(未完成)', link: '/基础知识/计算机/计算机组成原理' },  
+            ],
+          },
+          {
+            text: 'NEW',
+            collapsed: false,
+            items: [
+               
+            ],
+          },
+          ],
+        },
+        {
+          text: '数学',
+          collapsed: false,  
+        items: [
+          { text: '数学分析(未完成)', link: '/基础知识/数学/数学分析' },
+          { text: '高等代数(未完成)', link: '/基础知识/数学/高等代数' },
+        ],
+       },
+      ],
+      '/环境/': [
+        {
+          text: '操作系统安装', 
+          collapsed: false,  
          items:[
-            { text: '系统安装', link: '/环境/系统安装' },
-            { text: '各类语言环境配置', link: '/环境/各类语言环境配置' },
+            { text: '系统安装', link: '/环境/操作系统环境/系统安装' },
+         ]
+        },
+        {
+          text: '编程语言环境配置', 
+          collapsed: false,  
+         items:[
+            { text: '汇编语言', link: '/环境/各类语言环境配置/汇编语言' },
          ]
        },
-      {
-        text: '个人经历', 
+      ],
+      '/个人经历/': [
+        {
+          text: '周记',
+          collapsed: false,  
+          items: [
+            { text: '前言', link: '/个人经历/周记/前言' },  
+            { text: '第一周', link: '/个人经历/周记/第一周' },
+          ],
+        },
+        {
+          text: '阶段总结', 
+          collapsed: false,  
          items:[
-            { text: '周记', link: '/个人经历/周记' }, 
-            { text: '重启博客', link: '/个人经历/重启博客' },
-         ]
+           { text: '重启博客', link: '/个人经历/总结/重启博客' },
+           { text: '重现老博客文章', link: '/个人经历/总结/重现老博客文章' },
+           { text: '大一下期末总结', link: '/个人经历/总结/大一下期末总结' },
+         ],
        },
-    ],
-
-    sidebar: [
-      {
-        text: '数学',
-        collapsed: false,
-        items: [
-          { text: '数学分析(未完成)', link: '/数学/数学分析' },
-          { text: '高等代数(未完成)', link: '/数学/高等代数' },
-        ],
-      },
-      {
-        text: '基础知识',
-        collapsed: false,
-        items: [
-          { text: 'Linux基础', link: '/基础知识/《Linux基础》总集篇' },
-          { text: '网络知识基础', link: '/基础知识/《Linux网络基础》总集篇' },
-          { text: 'MySQL(未完成)', link: '/基础知识/MySQL' },
-          { text: '操作系统(未完成)', link: '/基础知识/操作系统' },
-          { text: '计算机组成原理(未完成)', link: '/基础知识/计算机组成原理' },
-        ],
-      },
-      {
-        text: '环境',
-        collapsed: false,
-        items: [
-          { text: '系统安装', link: '/环境/系统安装' },
-          { text: '各类语言环境配置', link: '/环境/各类语言环境配置' },
-        ],
-      },
-      {
-        text: '个人经历',
-        collapsed: false,
-        items: [
-          { text: '周记', link: '/个人经历/周记' },
-          { text: '重启博客', link: '/个人经历/重启博客' },
-          { text: '重现老博客文章', link: '/个人经历/重现老博客文章' },
-          { text: '大一下期末总结', link: '/个人经历/大一下期末总结' },
-        ],
-      }
-    ],
+      ],
+    },
     search: {
       provider: "local",
       options: {

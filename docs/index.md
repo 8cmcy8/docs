@@ -12,17 +12,21 @@ hero:
   actions:
     - theme: brand
       text: 周记
-      link: /个人经历/周记
-    - theme: alt
-      text: 环境
-      link: /环境/各类语言环境配置
+      link: /个人经历/周记/前言
 
 features:
   - title: 《日常》
-    details: 我们所度过的每个平凡的日常,也许就是连续发生的奇迹 
+    details: 我们所度过的每个平凡的日常,也许就是连续发生的奇迹 ！
   - title: 《长夜难明》
-    details: 虽长夜难明，但仍有人舍命燃灯
+    details: 虽长夜难明，但仍有人舍命燃灯。
   - title: 《毛泽东选集》
     details: 信仰是精神力量，精神力量是战胜一切力量的巨大力量。
+  - title: 《未闻花名》
+    details: 我们总是在意自己错过太多，却不曾注意自己拥有多少。
+  - title: 《机甲重拳》
+    details: 上帝会扼住你的喉咙，但不会让你窒息。
+  - title: 《进击的巨人》
+    details: 什么都无法舍弃的人，什么都改变不了。
 ---
 
+## 二次元帝皇侠
