@@ -94,7 +94,6 @@ export default defineConfig({
           text: '周记',
           collapsed: false,  
           items: [
-            { text: '前言', link: '/个人经历/周记/前言' },  
             { text: '第一周', link: '/个人经历/周记/第一周' },
           ],
         },
