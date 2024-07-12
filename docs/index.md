@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: 周记
-      link: /个人经历/周记/前言
+      link: /个人经历/index.md
 
 features:
   - title: 《日常》
