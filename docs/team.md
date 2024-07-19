@@ -74,7 +74,7 @@ const friend = [
   },
   {
     avatar: 'https://img2.woyaogexing.com/2022/06/23/00c4153f4f06fa63!400x400.jpg',
-    name: '逸叶双仙',
+    name: '逸仙双叶',
     title: '你的摄影是你生活的记录，给真正看到的人。',
     desc: '我的独立游戏朋友',
     links: [
