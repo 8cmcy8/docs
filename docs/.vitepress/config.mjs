@@ -97,6 +97,7 @@ export default defineConfig({
             { text: '第一周', link: '/个人经历/周记/第一周' },
             { text: '第二周', link: '/个人经历/周记/第二周' },
             { text: '第三周', link: '/个人经历/周记/第三周' },
+            { text: '第四周', link: '/个人经历/周记/第四周' },
           ],
         },
         {
