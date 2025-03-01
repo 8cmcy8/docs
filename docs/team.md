@@ -53,7 +53,7 @@ const partners = [
     ]
   },
   {
-    avatar: 'https://s1.aigei.com/prevfiles/4de01440565e40438e8d966cb5aedd61.png?e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:M1t37sfjV4bIggraqtW-_TERm8I=',
+    avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgxeVe7t2jOXvcOTqU95qE2rDwj6-kfcZWpg&s',
     name: '刘龙彬',
     title: '天不生夫子，万古长如夜！',
     desc:'本博客特效插件提供者',
@@ -64,7 +64,7 @@ const partners = [
 ]
 const friend = [
     {
-    avatar: 'https://s1.4sai.com/pvimg/img/png/19/19ffdf5875734fc59842e984a34f2c63.png?imageMogr2/auto-orient/thumbnail/!132x132r/gravity/Center/crop/132x132/quality/85/%7CimageView2/2/w/132&e=1735488000&token=1srnZGLKZ0Aqlz6dk7yF4SkiYf4eP-YrEOdM1sob:gvxOakSB1ljWgt_YoGLnj7gXJxk=',
+    avatar: 'https://七院创新基地.cn/img/logo.png',
     name: '七院创新基地',
     title: '真实、专注、卓越、不设限、创新',
     desc: '我几乎每天都在这里。。含金量不言而喻',

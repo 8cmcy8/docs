@@ -98,6 +98,8 @@ export default defineConfig({
             { text: '第二周', link: '/个人经历/周记/第二周' },
             { text: '第三周', link: '/个人经历/周记/第三周' },
             { text: '第四周', link: '/个人经历/周记/第四周' },
+            { text: '第五周', link: '/个人经历/周记/第五周' },
+            { text: '第六周', link: '/个人经历/周记/第六周' },
           ],
         },
         {
